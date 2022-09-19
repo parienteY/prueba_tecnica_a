@@ -19,7 +19,10 @@ Ionic + Angular, Git, Android Studio.
 2. Abrir Android Studio
 3. Importar proyecto de la carpeta "android" que se encuentra en el proyecto
 4. Ejecutar en el emulador
-### Instalacion (APK)
+### Instalación (APK)
 1. Ingresar a la carpeta "apk" dentro de los archivos del proyecto
 2. Arrastrar archivo a un emulador o a un celular
 3. Instalar apk
+### Instalación (IOS)
+No cuento con los medios necesarios para la instalación del proyecto en IOS, por lo tanto, no sabría cual es el proceso correcto de ejecución del proyecto,
+de todos modos he generado el proyecto nativo para IOS que se encuentra dentro de la carpeta "ios"
