@@ -3,7 +3,7 @@ Prueba técnica para postular a desarrollador FrontEnd Angular en la Empresa Hei
 ## Postulante
 Yurguen Enrique Pariente Ulloa - Bolivia
 ### Tecnologias utilizadas
-Ionic + Angular, Git, Android Studio.
+Ionic + Angular, Git, Android Studio y Postman.
 ### Instalaciones necesarias 
 - Ionic: npm install -g @ionic/cli
 - Angular CLI: npm install -g @angular/cli
