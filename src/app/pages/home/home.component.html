@@ -1,28 +1,28 @@
 
-<div class="main">
+<ion-app class="main">
   <ion-header class="contenedor1">
     <div class="containerTitulo">
-      <h3 id="titulo">Bienvenid@ al visualizador de datos de <span>JSONPlaceHolder</span></h3>
-    </div>
-    <div class="row">
-      <div class="col-6">
-        <app-card [item]="EntradaUsuarios"></app-card>
-      </div>
-      <div class="col-6">
-        <app-card [item]="EntradaPeticiones"></app-card>
+      <h4 id="titulo">JSONPlaceHolder</h4>
+      <h2 id="usuarioT">Usuarios</h2>
+      <div class="row">
+        <div class="col-6">
+          <app-card [item]="EntradaUsuarios"></app-card>
+        </div>
+        <div class="col-6">
+          <app-card [item]="EntradaPeticiones"></app-card>
+        </div>
       </div>
     </div>
   </ion-header>
   <div class="containerUsers">
-    <h3 id="registrados">Usuarios registrados</h3>
     <app-spinner *ngIf="users.length === 0; else contentUsers">
     </app-spinner>
     <div>
       <ng-template #contentUsers >
-        <ion-content id="users">
+        <ion-content class="users">
           <app-card-user *ngFor="let user of users" [user]="user"></app-card-user>
         </ion-content>
       </ng-template>
     </div>
   </div>
-</div>
+</ion-app>

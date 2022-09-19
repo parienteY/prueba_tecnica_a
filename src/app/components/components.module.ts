@@ -4,6 +4,7 @@ import { CardComponent } from './card/card.component';
 import { CardUserComponent } from './card-user/card-user.component';
 import { RouterModule } from '@angular/router';
 import { SpinnerComponent } from './spinner/spinner.component';
+import { PipesModule } from '../pipes/pipes.module';
 
 
 
@@ -11,7 +12,8 @@ import { SpinnerComponent } from './spinner/spinner.component';
   declarations: [CardComponent, CardUserComponent, SpinnerComponent],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    PipesModule
   ],
   exports: [CardComponent, CardUserComponent, SpinnerComponent]
 })

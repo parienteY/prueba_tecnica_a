@@ -1,6 +1,7 @@
 import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { App } from '@capacitor/app';
 import { IonRouterOutlet, Platform } from '@ionic/angular';
 import { Entrada } from 'src/app/interfaces/Entrada.interface';
 import { User } from 'src/app/interfaces/user.interface';
@@ -44,21 +45,13 @@ export class HomeComponent implements OnInit {
   }
 
   
-  constructor(private servicesServices:ServicesService, private platform: Platform, private router: Router,
-    private location: Location) {
+  constructor(private servicesServices:ServicesService, private platform: Platform, private router: Router, private routerOutlet: IonRouterOutlet) {
     console.log(this.constructor.name);
-    this.suscribe = this.platform.backButton.subscribeWithPriority(6666, () => {
-      if(this.constructor.name === "HomeComponent"){
-        const url = this.router["routerState"].snapshot.url;
-        if(url === "/home"){
-          if(window.confirm("Salir de la aplicación?")){
-            navigator["app"].exitApp();
-          }
-        }else{
-          this.location.back();
+      this.platform.backButton.subscribeWithPriority(-1, () => {
+        if(!this.routerOutlet.canGoBack()){
+            App.exitApp();
         }
-      }
-    })
+      })
    }
 
   ngOnInit() {

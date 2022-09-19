@@ -1,7 +1,8 @@
 
-<div class="main" >
+<ion-app class="main" >
   <ion-header>
     <div class="image" align="center">
+      <h4>Perfil de usuario</h4>
       <img src="https://cdn-icons-png.flaticon.com/512/219/219983.png" width="200" alt="user">
     </div>
     <div class="row p-3">
@@ -16,17 +17,20 @@
           </ion-card>
         </div>     
     </div>
-    <h6 class="p-3">Listado de álbumes:</h6>
   </ion-header>
-  <div style="height:100%;">
+  <div class="albumContainer">
     <app-spinner *ngIf="albums.length === 0; else al"></app-spinner>
     <ng-template #al>
       <ion-content >
-        <div *ngFor="let album of albums" class="container">
-          <ion-icon name="albums"></ion-icon>
-          <span>{{album.title | titlecase}}</span>
+        <div *ngFor="let album of albums" class="row">
+          <div class="col-1 mt-1">
+            <ion-icon name="file-tray-full" color="danger"></ion-icon>
+          </div>
+          <div class="col-10">
+            <span>{{album.title | titlecase}}</span>
+          </div>
         </div>
         </ion-content>
     </ng-template>
   </div>
-</div>
+</ion-app>

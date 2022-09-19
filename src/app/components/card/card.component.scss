@@ -1,26 +1,23 @@
 .main{
     padding: 12px;
-    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.containerValor{
+    flex-direction: row;
 }
 .card{
-    width: 40%;
-    position: absolute;
-    margin-bottom: 50px;
-    z-index: 999;
-    border: 2px solid rgb(82, 82, 82);
+    width: 100%;
     padding: 10px;
+    align-items: center;
     background-color: white;
-}
-.row{
-    margin-top: 10px;
+    border-radius: 30px;
 }
 #valor{
     font-size: 18px;
-    color: rgb(82, 82, 82)
+    margin-left: 5px;
 }
 #titulo{
     font-size: 14px;
     font-weight: bold;
     text-align: center;
-    color: rgb(82, 82, 82)
 }
