@@ -1,0 +1,32 @@
+
+<div class="main" >
+  <ion-header>
+    <div class="image" align="center">
+      <img src="https://cdn-icons-png.flaticon.com/512/219/219983.png" width="200" alt="user">
+    </div>
+    <div class="row p-3">
+        <div class="col-8">
+          <h3>{{user.name}}</h3>
+          <h6>{{user.address.city}}</h6>
+        </div> 
+        <div class="col-4">
+          <ion-card class="p-2 text-center">
+            <ion-card-subtitle>N° Posts</ion-card-subtitle>
+            <ion-card-title>{{posts}}</ion-card-title>
+          </ion-card>
+        </div>     
+    </div>
+    <h6 class="p-3">Listado de álbumes:</h6>
+  </ion-header>
+  <div style="height:100%;">
+    <app-spinner *ngIf="albums.length === 0; else al"></app-spinner>
+    <ng-template #al>
+      <ion-content >
+        <div *ngFor="let album of albums" class="container">
+          <ion-icon name="albums"></ion-icon>
+          <span>{{album.title | titlecase}}</span>
+        </div>
+        </ion-content>
+    </ng-template>
+  </div>
+</div>

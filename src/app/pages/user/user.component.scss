@@ -1,0 +1,32 @@
+.main{
+    background-image: radial-gradient(circle at 33.6% 26.58%, #99fa55 0, #81f35b 16.67%, #69eb61 33.33%, #4ce266 50%, #25d96b 66.67%, #00d06f 83.33%, #00c974 100%);
+}
+h4, h3, h6{
+    color:white;
+    font-weight: bold;
+}
+.p-2{
+    background-color: rgb(82, 82, 82);
+    border: 1px solid white;
+}
+ion-card-subtitle,
+ion-card-title{
+    color: white;
+}
+span{
+     padding: 5px; 
+     font-size: 12px;
+     letter-spacing: 1px;
+     margin-bottom: 5px;
+     color:rgb(82, 82, 82)
+}
+io-content{
+    background-color: #160011;
+}
+.container{
+    padding: 10px;
+    background-color: white;
+    margin-top: 2px;
+    border: 1px solid rgb(4, 223, 95);
+    flex-direction: row;
+}

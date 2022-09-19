@@ -1,0 +1,29 @@
+
+<a (click)="changeView()" style="text-decoration: none;">
+  <ion-card>
+    <div class="row p-2">
+      <div class="col-5">
+        <ion-card-title id="title">{{user.name}}</ion-card-title>
+        <ion-card-subtitle>{{user.address.city}}</ion-card-subtitle>
+      </div>
+      <div class="col-7">
+        <div class="row">
+          <div class="col-1 mt-1">
+            <ion-icon name="mail"></ion-icon>
+          </div>
+          <div class="col-10">
+            <span>{{user.email}}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-1">
+            <ion-icon name="call"></ion-icon>
+          </div>
+          <div class="col-10">
+            <span>{{user.phone}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-card>
+</a>
